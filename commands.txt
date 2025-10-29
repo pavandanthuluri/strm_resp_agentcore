@@ -1,0 +1,14 @@
+pip install --force-reinstall -U -r .\requirements.txt --quiet
+
+
+aws configure [--profile profile-name]
+
+
+aws configure --profile personal
+
+aws s3 ls --profile personal
+
+set AWS_PROFILE=personal
+
+
+https://github.com/aws/bedrock-agentcore-starter-toolkit/blob/main/documentation/docs/user-guide/runtime/permissions.md#developercaller-permissions

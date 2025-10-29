@@ -7,6 +7,7 @@ region = boto_session.region_name
 
 
 agentcore_runtime = Runtime()
+
 response = agentcore_runtime.configure(
     entrypoint="strands_claude_streaming.py",
     auto_create_execution_role=True,
@@ -27,7 +28,7 @@ while status not in end_status:
     status = status_response.endpoint['status']
     print(status)
 
-
+time.sleep(30)
 invoke_response = agentcore_runtime.invoke({
     "prompt":
     "give me a detailed response of why people are going crazy with artificial inteligence"
